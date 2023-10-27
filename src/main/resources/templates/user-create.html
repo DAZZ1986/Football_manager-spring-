@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+</head>
+<body>
+<!-- тут собрали объект с фронта и передали в контроллер в метод action="@{/user-create} и далее сохранили в БД -->
+<!-- выполнить действие которое указано по ссылке action="@{/user-create} POST -->
+<!-- имя объекта котоырый мы будем передавать th:object="${userObjParamCreate}" и передаем методом POST чтобы передать данные с фронта в БД -->
+<!-- по нажатию кнопки submit мы переходим в метод к контроллере {/user-create} -->
+<form action="#" th:action="@{/user-create}" th:object="${userObjParamCreate}" method="post">
+
+      <label for="firstName_Label1">First name</label>
+      <input type="text" th:field="*{firstNameAAA}" id="firstName_Label1" placeholder="First Name">
+
+      <label for="lastName_Label2">Last name</label>
+      <input type="text" th:field="*{lastNameDDD}" id="lastName_Label2" placeholder="Last Name">
+
+      <input type="submit" value="Create User">
+    </form>
+</body>
+</html>
